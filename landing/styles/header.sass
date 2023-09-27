@@ -1,0 +1,100 @@
+@import "mixins"
+@import "typographics"
+@import "color"
+
+.navigation
+  font-family: Inter-SemiBold, sans-serif
+  font-size: 14px
+  line-height: 24px
+  @include flexible
+  justify-content: space-between
+  padding: 16px 52px
+  &__menu
+    @include flexible
+    gap: 40px
+    padding: 6px
+    &__product
+      @include flexible
+      gap: 2px
+
+  &__tabs
+    @include flexible
+    gap: 20px
+    padding: 4px
+
+    &__icon
+      width: 28px
+      height: 28px
+      &__bag
+        @include flexible
+
+.chevron
+  width: 18px
+  height: 18px
+  margin: 3px 0
+
+.ellipse
+  position: relative
+  width: 20px
+  height: 20px
+  margin: 4px 0
+
+.number
+  position: absolute
+  @include flexible
+  font-family: Inter-Bold, sans-serif
+  font-size: 12px
+  line-height: 20px
+  width: 20px
+  top: 0
+  left: 0
+  color: $white
+
+.content
+  position: relative
+  &__visual
+    background: $background
+    @include flexible
+    gap: 82px
+    &__img
+      width: 736px
+      height: 700px
+
+    &__info
+      width: 488px
+      margin-right: 134px
+      @include grid
+      font-family: Inter-SemiBold, sans-serif
+      font-size: 18px
+      gap: 28px
+      &__text
+        @include grid
+        row-gap: 8px
+        &__1
+          font-size: 16px
+          line-height: 26px
+        &__2
+          font-size: 54px
+          line-height: 62px
+        &__3
+          font-family: Inter-Regular, sans-serif
+          line-height: 30px
+      &__link
+        text-decoration: underline
+        line-height: 32px
+
+.header__arrows
+  position: absolute
+  top: 0
+  margin: 324px 24px
+  padding: 0 28px
+  @include flexible
+  gap: 1256px
+  &__button
+    box-shadow: 0 1px 10px 0 $shadow
+    width: 52px
+    height: 52px
+    padding: 10px
+    border-radius: 100px
+    background-color: $white
+    border: none

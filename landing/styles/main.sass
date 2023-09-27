@@ -1,0 +1,180 @@
+@import "typographics"
+@import "color"
+@import "mixins"
+@import "header"
+@import "footer"
+body
+  width: 1440px
+  margin: auto
+  display: grid
+  justify-content: center
+  color: $main
+main
+  display: grid
+  gap: 104px
+  margin: 52px
+  width: 1336px
+
+.logo
+  position: relative
+  height: 192px
+  border-top: 1px solid $line
+  border-bottom: 1px solid $line
+  &__arrows
+    position: absolute
+    display: flex
+    margin: 73px -2px
+    gap: 1246px
+    &__button
+      box-shadow: 0 1px 10px 0 $shadow
+      width: 46px
+      height: 46px
+      padding: 9px
+      border-radius: 100px
+      background-color: white
+      border: none
+      &__img
+        width: 28px
+        height: 28px
+
+  &__group
+    @include flexible
+    gap: 48px
+    margin: 56px 0
+    height: 80px
+
+.models
+  @include flexible
+  gap: 32px
+  &__card
+    display: grid
+    row-gap: 16px
+    &__text
+      @include grid
+      text-align: center
+      height: 52px
+      margin-bottom: 32px
+      gap: 2px
+      &__type
+        color: $text_link
+        font-family: Inter-Regular,sans-serif
+        font-size: 14px
+        line-height: 26px
+      &__name
+        color: $main
+        font-family: Inter-SemiBold, sans-serif
+        font-size: 20px
+        line-height: 28px
+
+.discount
+  display: flex
+  align-items: center
+  gap: 114px
+  background-color: $background
+  &__visual
+    display: grid
+    gap: 32px
+    &__info
+      display: grid
+      gap: 24px
+      font-family: Inter-SemiBold, sans-serif
+      width: 456px
+      font-size: 18px
+      &__text
+        display: grid
+        gap: 8px
+        &__1
+          font-size: 16px
+          line-height: 26px
+        &__2
+          font-size: 54px
+          line-height: 62px
+          letter-spacing: -1px
+        &__3
+          font-family: Inter-Regular,sans-serif
+          line-height: 30px
+        &__4
+          font-size: 34px
+          line-height: 40px
+          letter-spacing: -0.4px
+      &__btn
+        width: 134px
+        height: 52px
+        padding: 10px
+        background: $main
+        &__label
+          color: $white
+          font-family: Inter-SemiBold, sans-serif
+          font-size: 18px
+          line-height: 32px
+          letter-spacing: -0.4px
+
+
+.signup
+  @include grid
+  gap: 24px
+  padding: 87px 398px 79px 398px
+  border: 1px solid $border
+  border-radius: 12px
+  &__text
+    @include grid
+    gap: 8px
+    &__title
+      font-family: Inter-SemiBold, sans-serif
+      font-size: 42px
+      line-height: 54px
+      letter-spacing: -0.4px
+    &__description
+      font-family: Inter-Regular, sans-serif
+      font-size: 18px
+      line-height: 30px
+  &__form
+    display: flex
+    padding-bottom: 20px
+    gap: 8px
+    border-bottom: 1px solid $line
+    &__input
+      width: 395px
+      height: 26px
+      border: none
+    &__input::placeholder
+      font-family: Inter-Regular, sans-serif
+      line-height: 26px
+      font-size: 16px
+    &__link
+      font-family: Inter-SemiBold, sans-serif
+      font-size: 16px
+      line-height: 28px
+      letter-spacing: -0.4px
+
+
+
+.banner
+  padding: 158px 427px 99px 431px
+  background: url("img/photos/banner.png") no-repeat
+  background-size: 100%
+  text-align: center
+  color: white
+  display: grid
+  gap: 24px
+  &__text
+    display: grid
+    gap: 13px
+    &__title
+      font-family: Inter-SemiBold, sans-serif
+      font-size: 42px
+      line-height: 54px
+      letter-spacing: -0.4px
+    &__description
+      font-family: Inter-Regular, sans-serif
+      font-size: 18px
+      line-height: 30px
+  &__link
+    text-decoration: underline
+    font-family: Inter-SemiBold, sans-serif
+    font-size: 18px
+    line-height: 32px
+    letter-spacing: -0.4px
+
+
+
