@@ -3,28 +3,47 @@
 @import "mixins"
 @import "header"
 @import "footer"
+
 body
-  width: 1440px
-  margin: auto
-  display: grid
-  justify-content: center
   color: $main
+  @include device(mobile)
+    margin: 0
+
 main
-  display: grid
+  display: flex
+  flex-direction: column
   gap: 104px
   margin: 52px
-  width: 1336px
-
+  @include device(mobile)
+    margin: 40px 0 24px 0
+    gap: 0
 .logo
+  &__nav
+    display: none
+    @include device(mobile)
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 10px
+      margin-top: 32px
+      margin-bottom: 40px
+  width: 100%
+  height: 100%
   position: relative
-  height: 192px
   border-top: 1px solid $line
   border-bottom: 1px solid $line
+  @include device(mobile)
+    border: none
   &__arrows
+    @include device(mobile)
+      display: none
     position: absolute
+    top: 0
+    left: 0
     display: flex
     margin: 73px -2px
-    gap: 1246px
+    width: 100%
+    justify-content: space-between
     &__button
       box-shadow: 0 1px 10px 0 $shadow
       width: 46px
@@ -38,142 +57,234 @@ main
         height: 28px
 
   &__group
+    @include device(mobile)
+      width: auto
+      height: auto
+      flex-wrap: wrap
+      margin: 0
+      row-gap: 16px
+      column-gap: 40px
     @include flexible
     gap: 48px
     margin: 56px 0
     height: 80px
+    &__img
+      @include device(mobile)
+        width: auto
+        display: flex
+        justify-content: space-between
+
+
 
 .models
   @include flexible
+  @include device(mobile)
+    flex-wrap: wrap
+    margin: 24px 0
   gap: 32px
   &__card
     display: grid
     row-gap: 16px
+    @include device(mobile)
+      width: 100%
+      padding: 0 16px
+    img
+      width: 100%
+      @include device(mobile)
+        width: 100%
     &__text
       @include grid
       text-align: center
-      height: 52px
-      margin-bottom: 32px
       gap: 2px
       &__type
+        @include font-master(14px, 400, 26px)
         color: $text_link
-        font-family: Inter-Regular,sans-serif
-        font-size: 14px
-        line-height: 26px
       &__name
         color: $main
-        font-family: Inter-SemiBold, sans-serif
-        font-size: 20px
-        line-height: 28px
+        @include font-master(20px, 600, 28px)
 
 .discount
+  width: auto
+  height: auto
+  @include device(mobile)
+    background: none
+    flex-wrap: wrap
+    gap: 24px
+    margin-bottom: 24px
+    padding: 0 16px
+  img
+    width: 60%
+    @include device(mobile)
+      width: 100%
   display: flex
   align-items: center
   gap: 114px
   background-color: $background
   &__visual
-    display: grid
+    display: flex
+    flex-direction: column
     gap: 32px
     &__info
-      display: grid
+      @include device(mobile)
+        gap: 16px
+      display: flex
+      flex-direction: column
       gap: 24px
       font-family: Inter-SemiBold, sans-serif
-      width: 456px
       font-size: 18px
       &__text
         display: grid
         gap: 8px
+        @include device(mobile)
+          gap: 4px
         &__1
-          font-size: 16px
-          line-height: 26px
+          @include font-master(16px, 600, 26px)
+          @include device(mobile)
+            @include font-master(12px, 600, 20px)
         &__2
-          font-size: 54px
-          line-height: 62px
+          @include font-master(54px, 600, 62px)
           letter-spacing: -1px
+          @include device(mobile)
+            margin-bottom: 4px
+            letter-spacing: -0.4px
+            @include font-master(34px, 600, 40px)
         &__3
-          font-family: Inter-Regular,sans-serif
-          line-height: 30px
+          @include font-master(18px, 400, 30px)
+          @include device(mobile)
+            @include font-master(14px, 400, 22px)
         &__4
-          font-size: 34px
-          line-height: 40px
+          @include font-master(34px, 600, 40px)
           letter-spacing: -0.4px
+          @include device(mobile)
+            @include font-master(28px, 600, 34px)
+            letter-spacing: -0.6px
       &__btn
-        width: 134px
-        height: 52px
+        width: 40%
+        @include device(tablet)
+          width: 100%
         padding: 10px
         background: $main
         &__label
-          color: $white
-          font-family: Inter-SemiBold, sans-serif
-          font-size: 18px
-          line-height: 32px
+          @include font-master(18px, 600, 32px)
           letter-spacing: -0.4px
+          @include device(mobile)
+            @include font-master(16px, 600, 28px)
+          color: $white
+
 
 
 .signup
-  @include grid
+  width: auto
+  padding: 87px 0
+  display: flex
+  flex-direction: column
   gap: 24px
-  padding: 87px 398px 79px 398px
+  justify-content: center
+  align-items: center
+  @include device(mobile)
+    flex-wrap: wrap
+    padding: 117px 16px
+    margin: 16px
   border: 1px solid $border
   border-radius: 12px
   &__text
-    @include grid
+    text-align: center
+    display: flex
+    width: auto
+    flex-direction: column
     gap: 8px
     &__title
-      font-family: Inter-SemiBold, sans-serif
-      font-size: 42px
-      line-height: 54px
+      @include font-master(42px, 600, 54px)
       letter-spacing: -0.4px
+      @include device(mobile)
+        @include font-master(34px, 600, 40px)
     &__description
-      font-family: Inter-Regular, sans-serif
-      font-size: 18px
-      line-height: 30px
+      @include font-master(18px, 400, 30px)
+      @include device(mobile)
+        @include font-master(14px, 400, 22px)
   &__form
+    width: auto
+    @include device(mobile)
+      padding: 0
+      align-items: center
     display: flex
     padding-bottom: 20px
     gap: 8px
     border-bottom: 1px solid $line
     &__input
-      width: 395px
-      height: 26px
+      width: 100%
       border: none
     &__input::placeholder
-      font-family: Inter-Regular, sans-serif
-      line-height: 26px
-      font-size: 16px
+      @include font-master(16px, 400, 26px)
+      @include device(mobile)
+        @include font-master(14px, 400, 22px)
     &__link
       font-family: Inter-SemiBold, sans-serif
-      font-size: 16px
-      line-height: 28px
+      @include font-master(16px, 600, 28px)
       letter-spacing: -0.4px
+      @include device(mobile)
+        display: none
+  &__btn
+    box-sizing: border-box
+    display: none
+    @include device(mobile)
+      margin-top: -6px
+      display: flex
+      justify-content: center
+      width: 100%
+      border-radius: 6px
+      padding: 8px 20px
+      background: $main
+    &__label
+      @include font-master(14px, 600, 24px)
+      color: $white
 
 
 
 .banner
-  padding: 158px 427px 99px 431px
+  width: auto
+  height: 400px
+  display: flex
+  flex-direction: column
+  padding: 0 30%
+  @include device(mobile)
+    gap: 16px
+    width: auto
+    height: 100%
+    display: flex
+    margin: 24px 16px 8px 16px
+    flex-direction: column
+    align-items: center
+    padding: 0 16px
   background: url("img/photos/banner.png") no-repeat
-  background-size: 100%
+  background-size: cover
+  background-position: center
   text-align: center
   color: white
-  display: grid
   gap: 24px
   &__text
     display: grid
+    padding-top: 20%
     gap: 13px
+    @include device(mobile)
+      gap: 12px
+      padding-top: 15%
     &__title
-      font-family: Inter-SemiBold, sans-serif
-      font-size: 42px
-      line-height: 54px
+      @include font-master(42px, 600, 54px)
       letter-spacing: -0.4px
+      @include device(mobile)
+        @include font-master(34px, 600, 40px)
     &__description
-      font-family: Inter-Regular, sans-serif
-      font-size: 18px
-      line-height: 30px
+      @include font-master(18px, 400, 30px)
+      @include device(mobile)
+        @include font-master(14px, 400, 22px)
   &__link
+    padding-bottom: 20%
+    @include font-master(18px, 600, 32px)
+    @include device(mobile)
+      @include font-master(16px, 600, 28px)
+      padding-bottom: 19%
     text-decoration: underline
-    font-family: Inter-SemiBold, sans-serif
-    font-size: 18px
-    line-height: 32px
     letter-spacing: -0.4px
 
 

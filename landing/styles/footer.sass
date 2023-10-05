@@ -3,27 +3,37 @@
 @import "mixins"
 
 footer
+  width: auto
+  margin: auto
   padding: 72px 52px 32px 52px
-  @include grid
+  @include device(mobile)
+    padding: 48px 16px 24px 16px
+    gap: 0
+  display: grid
   gap: 72px
   background: $background
 
-.content
+.footer__content
+  @include device(mobile)
+    gap: 24px
+    display: grid
   display: flex
   gap: 384px
-  width: 1336px
   &__links
-    width: 310px
+    @include device(mobile)
+      width: auto
+    width: 40%
     @include grid
     gap: 24px
     &__info
+      @include font-master(16px, 400, 22px)
       @include grid
       gap: 16px
-      font-family: Inter-Regular, sans-serif
-      font-size: 16px
-      line-height: 26px
+      @include font-master(16px, 400, 26px)
       color: $text_description
     &__icons
+      @include device(mobile)
+        display: none
       display: flex
       align-items: center
       gap: 16px
@@ -35,41 +45,82 @@ footer
         height: 36px
         padding: 9px
   &__columns
+    @include device(mobile)
+      display: grid
+      grid-template-columns: 100%
+      gap: 0
+      width: auto
     @include flexible
     gap: 120px
     &__item
-      @include grid
+      display: grid
       gap: 16px
+      @include device(mobile)
+        width: 100%
       &__header
-        font-family: Inter-SemiBold, sans-serif
-        font-size: 14px
-        line-height: 24px
+        img
+          display: none
+          @include device(mobile)
+            display: inline
+        @include device(mobile)
+          border-bottom: 1px solid $line
+          margin: 10px 0
+          display: flex
+          align-items: center
+          justify-content: space-between
+          width: auto
+        @include font-master(14px, 600, 24px)
       &__list
+        @include device(mobile)
+          display: none
         @include grid
         gap: 10px
         list-style: none
         padding: 0
         margin: 0
         color: $text_link
-        font-family: Inter-Regular, sans-serif
-        font-size: 14px
-        line-height: 22px
+        @include font-master(14px, 400, 22px)
 
 .bottom
-  width: 1336px
-  font-family: Inter-SemiBold, sans-serif
-  font-size: 14px
-  line-height: 24px
+  width: 100%
+  @include font-master(14px, 600, 24px)
+  @include device(mobile)
+    display: grid
+    justify-content: center
+    align-items: center
+    border: none
+    padding: 0
   padding-top: 24px
   border-top: 1px solid $line
   display: flex
   justify-content: space-between
   &__ink
-    font-family: Inter-Regular, sans-serif
+    @include device(mobile)
+      order: 3
+      margin-top: 16px
+    @include font-master(14px, 400, 22px)
+    text-align: center
     color: $text_link
-    font-size: 14px
-    height:  22px
+  &__icons
+    display: none
+    @include device(mobile)
+      display: flex
+      gap: 16px
+    order: 2
+    align-items: center
+    gap: 16px
+    &__btn
+      border-radius: 100%
+      border: none
+      background: $white
+      width: 36px
+      height: 36px
+      padding: 9px
   &__selector
+    @include device(mobile)
+      order: 1
+      margin: 32px 0
+      gap: 24px
     @include flexible
     gap: 32px
     &__language

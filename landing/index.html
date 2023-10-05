@@ -12,7 +12,7 @@
 <body>
 <header>
     <section class="navigation">
-        <img src="img/universal/branding.svg">
+        <img class="branding" src="img/universal/branding.svg">
         <nav class="navigation__menu">
             <a>Home</a>
             <a>Shop</a>
@@ -20,15 +20,16 @@
             <a>Pages</a>
         </nav>
         <nav class="navigation__tabs">
-            <a class="navigation__tabs__icon"><img src="img/icons/search.svg"></a>
-            <a class="navigation__tabs__icon"><img src="img/icons/user.svg"></a>
-            <a class="navigation__tabs__icon"><img src="img/icons/heart.svg"></a>
-            <a class="navigation__tabs__icon__bag"><img src="img/icons/bag.svg">
-                <div class="ellipse">
-                    <img src="img/universal/ellipse.svg">
-                    <div class="number">2</div>
+            <a class="navigation__tabs__icon__hidden"><img src="img/icons/search.svg"></a>
+            <a class="navigation__tabs__icon__hidden"><img src="img/icons/user.svg"></a>
+            <a class="navigation__tabs__icon__hidden"><img src="img/icons/heart.svg"></a>
+            <a class="navigation__tabs__icon__bag"><img class="navigation__tabs__icon__bag__img" src="img/icons/bag.svg">
+                <div class="bag__ellipse">
+                    <img class="bag__ellipse__img"  src="img/universal/ellipse.svg">
+                    <div class="bag__ellipse__number">2</div>
                 </div>
             </a>
+            <a class="hamburger"><img src="img/icons/hamburger.svg"></a>
         </nav>
     </section>
 
@@ -66,6 +67,11 @@
             <img src="img/logo/marc.svg">
             <img src="img/logo/supreme.svg">
         </div>
+        <nav class="logo__nav">
+            <img class="logo__nav__img" src="img/icons/nav_dots_sel.svg">
+            <img class="logo__nav__img" src="img/icons/nav_dots.svg">
+            <img class="logo__nav__img" src="img/icons/nav_dots.svg">
+        </nav>
     </section>
 
     <section class="models">
@@ -118,6 +124,7 @@
             <input class="signup__form__input" placeholder="Email address">
             <a class="signup__form__link">Signup</a>
         </form>
+        <button class="signup__btn"><label class="signup__btn__label">Signup</label></button>
     </section>
 
     <section class="banner">
@@ -131,41 +138,44 @@
 </main>
 
 <footer>
-    <section class="content">
-        <div class="content__links">
-            <div class="content__links__info">
+    <section class="footer__content">
+        <div class="footer__content__links">
+            <div class="footer__content__links__info">
                 <img src="img/universal/branding.svg">
                 <div>Phosf luorescently engage worldwide method process shopping.</div>
             </div>
-            <div class="content__links__icons">
-                <button class="content__links__icons__btn"><img src="img/icons/facebook.svg"></button>
-                <button class="content__links__icons__btn"><img src="img/icons/instagram.svg"></button>
-                <button class="content__links__icons__btn"><img src="img/icons/twitter.svg"></button>
-                <button class="content__links__icons__btn"><img src="img/icons/email.svg"></button>
+            <div class="footer__content__links__icons">
+                <button class="footer__content__links__icons__btn"><img src="img/icons/facebook.svg"></button>
+                <button class="footer__content__links__icons__btn"><img src="img/icons/instagram.svg"></button>
+                <button class="footer__content__links__icons__btn"><img src="img/icons/twitter.svg"></button>
+                <button class="footer__content__links__icons__btn"><img src="img/icons/email.svg"></button>
             </div>
         </div>
-        <div class="content__columns">
-            <div class="content__columns__item">
-                <div class="content__columns__item__header">Product</div>
-                <ul class="content__columns__item__list">
+        <div class="footer__content__columns">
+            <div class="footer__content__columns__item">
+                <div class="footer__content__columns__item__header">
+                    Product<img class="chevron" src="img/universal/chevron-down.svg"></div>
+                <ul class="footer__content__columns__item__list">
                     <li>Learn</li>
                     <li>Plugins</li>
                     <li>Gallery</li>
                     <li>Pricing</li>
                 </ul>
             </div>
-            <div class="content__columns__item">
-                <div class="content__columns__item__header">Information</div>
-                <ul class="content__columns__item__list">
+            <div class="footer__content__columns__item">
+                <div class="footer__content__columns__item__header">
+                    Information<img class="chevron" src="img/universal/chevron-down.svg"></div>
+                <ul class="footer__content__columns__item__list">
                     <li>Privacy</li>
                     <li>Cookies</li>
                     <li>Terms</li>
                     <li>Security</li>
                 </ul>
             </div>
-            <div class="content__columns__item">
-                <div class="content__columns__item__header">Support</div>
-                <ul class="content__columns__item__list">
+            <div class="footer__content__columns__item">
+                <div class="footer__content__columns__item__header">
+                    Support<img class="chevron" src="img/universal/chevron-down.svg"></div>
+                <ul class="footer__content__columns__item__list">
                     <li>Updates</li>
                     <li>Discord</li>
                     <li>Startups</li>
@@ -177,6 +187,12 @@
 
     <section class="bottom">
         <div class="bottom__ink">© 2088 Nayzak</div>
+        <div class="bottom__icons">
+            <button class="bottom__icons__btn"><img src="img/icons/facebook.svg"></button>
+            <button class="bottom__icons__btn"><img src="img/icons/instagram.svg"></button>
+            <button class="bottom__icons__btn"><img src="img/icons/twitter.svg"></button>
+            <button class="bottom__icons__btn"><img src="img/icons/email.svg"></button>
+        </div>
         <div class="bottom__selector">
             <div class="bottom__selector__language">
                 <img src="img/icons/flag.svg">

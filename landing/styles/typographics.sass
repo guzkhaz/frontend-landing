@@ -1,17 +1,12 @@
-@font-face
-  font-family: Inter-Regular
-  font-style: normal
-  font-weight: 400
-  src: url("fonts/static/Inter-Regular.ttf")
+@import "color"
 
 @font-face
-  font-family: Inter-SemiBold
-  font-style: normal
-  font-weight: 600
-  src: url("fonts/static/Inter-SemiBold.ttf")
+  font-family: Inter
+  src: url("fonts/Inter-VariableFont_slnt,wght.ttf")
 
-@font-face
-  font-family: Inter-Bold
+@mixin font-master($size, $weight, $height)
+  font-family: Inter, sans-serif
   font-style: normal
-  font-weight: 700
-  src: url("fonts/static/Inter-Bold.ttf")
+  font-size: $size
+  font-weight: $weight
+  line-height: $height
